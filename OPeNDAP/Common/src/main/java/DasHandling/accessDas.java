@@ -33,7 +33,7 @@ import opendap.dap.NoSuchAttributeException;
  *
  * @author ankit
  */
-public class AccessDas {
+public class accessDas {
 
     private DConnect2 url = null;
     private String serverVersion = null;
@@ -47,20 +47,20 @@ public class AccessDas {
     
     private Vector attributeElements;
     
-    public AccessDas(){
+    public accessDas(){
         this.url = null;
     }
     
-    public AccessDas(DConnect2 url){
+    public accessDas(DConnect2 url){
         this.url = url;
         try {
             das = url.getDAS();
         } catch (IOException ex) {
-            Logger.getLogger(AccessDas.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(accessDas.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(AccessDas.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(accessDas.class.getName()).log(Level.SEVERE, null, ex);
         } catch (DAP2Exception ex) {
-            Logger.getLogger(AccessDas.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(accessDas.class.getName()).log(Level.SEVERE, null, ex);
         }
         InitializeAttribute();
     }
@@ -107,7 +107,7 @@ public class AccessDas {
     }
     
     public Enumeration getAllAttributeKeys(){
-        return attributeElements;
+        return (Enumeration) attributeElements;
     }
     
 }
