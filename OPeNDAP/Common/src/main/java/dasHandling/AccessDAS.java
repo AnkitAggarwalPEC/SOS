@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package DasHandling;
+package dasHandling;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -33,7 +33,7 @@ import opendap.dap.NoSuchAttributeException;
  *
  * @author ankit
  */
-public class accessDas {
+public class AccessDAS {
 
     private DConnect2 url = null;
     private String serverVersion = null;
@@ -47,20 +47,20 @@ public class accessDas {
     
     private Vector attributeElements;
     
-    public accessDas(){
+    public AccessDAS(){
         this.url = null;
     }
     
-    public accessDas(DConnect2 url){
+    public AccessDAS(DConnect2 url){
         this.url = url;
         try {
             das = url.getDAS();
         } catch (IOException ex) {
-            Logger.getLogger(accessDas.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AccessDAS.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(accessDas.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AccessDAS.class.getName()).log(Level.SEVERE, null, ex);
         } catch (DAP2Exception ex) {
-            Logger.getLogger(accessDas.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AccessDAS.class.getName()).log(Level.SEVERE, null, ex);
         }
         InitializeAttribute();
     }
