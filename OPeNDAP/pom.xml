@@ -10,5 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>Common</module>
+        <module>dao</module>
     </modules>
 </project>
